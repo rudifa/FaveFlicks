@@ -1,4 +1,4 @@
-/// Copyright (c) 2020 Razeware LLC
+/// Copyright (c) 2021 Razeware LLC
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -32,54 +32,25 @@
 
 import SwiftUI
 
-struct AddMovie: View {
-  static let defaultMovieTitle = "An untitled masterpiece"
-  static let defaultMovieGenre = Movie.possibleGenres.first ?? "Genre-buster"
-
-  let movieStore: MovieStore
-  @Binding var showModal: Bool
-  @State private var title = ""
-  @State private var genre = ""
-  @State private var rating: Double = 0
+struct GenrePicker: View {
+  // 1
+  @Binding var genre: String
 
   var body: some View {
-    NavigationView {
-      Form {
-        Section(header: Text("Title")) {
-          TextField("Title", text: $title)
-        }
-        Section(header: Text("Genre")) {
-//          Picker(selection: $genre, label: Spacer()) {
-//            ForEach(Movie.possibleGenres, id: \.self) {
-//              Text($0)
-//            }
-//          }.pickerStyle(WheelPickerStyle())
-
-          GenrePicker(genre: $genre)
-        }
-
-        Section(header: Text("Rating")) {
-          Slider(value: $rating, in: 0 ... 5, step: 0.5)
-          RatingView(rating: rating)
-        }
+    // 2
+    Picker(selection: $genre, label: Spacer()) {
+      // 3
+      ForEach(Movie.possibleGenres, id: \.self) {
+        Text($0)
       }
-      .navigationBarTitle(Text("Add Movie"), displayMode: .inline)
-      .navigationBarItems(
-        trailing:
-        Button(action: addMovie) {
-          Text("Add")
-        }
-      )
     }
+    .pickerStyle(WheelPickerStyle())
   }
+}
 
-  private func addMovie() {
-    movieStore.addMovie(
-      title: title.isEmpty ? AddMovie.defaultMovieTitle : title,
-      genre: genre.isEmpty ? AddMovie.defaultMovieGenre : genre,
-      rating: rating
-    )
-
-    showModal.toggle()
+struct GenrePicker_Previews: PreviewProvider {
+  static var previews: some View {
+    // 4
+    GenrePicker(genre: .constant("Action"))
   }
 }

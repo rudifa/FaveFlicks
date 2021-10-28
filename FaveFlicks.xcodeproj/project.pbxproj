@@ -19,6 +19,7 @@
 		95710F89240A88B300911BD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95710F87240A88B300911BD1 /* LaunchScreen.storyboard */; };
 		95E56B1324BC7BE700FA3C6E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E56B1224BC7BE700FA3C6E /* Movie.swift */; };
 		95E56B1524BC949400FA3C6E /* MovieStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E56B1424BC949400FA3C6E /* MovieStore.swift */; };
+		9D278CDA272B43D500E64D4F /* GenrePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D278CD9272B43D500E64D4F /* GenrePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		95E56B1224BC7BE700FA3C6E /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		95E56B1424BC949400FA3C6E /* MovieStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieStore.swift; sourceTree = "<group>"; };
 		9D278CD8272B36D300E64D4F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9D278CD9272B43D500E64D4F /* GenrePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenrePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				95710F7C240A889600911BD1 /* AddMovie.swift */,
 				95E56B1424BC949400FA3C6E /* MovieStore.swift */,
 				9528E76324D58BFE00ECCC79 /* RatingView.swift */,
+				9D278CD9272B43D500E64D4F /* GenrePicker.swift */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95710F83240A889600911BD1 /* MovieList.swift in Sources */,
+				9D278CDA272B43D500E64D4F /* GenrePicker.swift in Sources */,
 				95710F80240A889600911BD1 /* MovieRow.swift in Sources */,
 				95E56B1324BC7BE700FA3C6E /* Movie.swift in Sources */,
 				9528E76424D58BFE00ECCC79 /* RatingView.swift in Sources */,
