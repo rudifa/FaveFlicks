@@ -21,12 +21,14 @@ A [RW tutorial](https://www.raywenderlich.com/11781349-understanding-data-flow-i
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
 </style>
+
+
 <table class="tg">
 <thead>
   <tr>
     <th class="tg-0pky"></th>
     <th class="tg-0pky">type</th>
-    <th class="tg-0pky"></th>
+    <th class="tg-0pky">example</th>
   </tr>
 </thead>
 <tbody>
@@ -48,7 +50,7 @@ A [RW tutorial](https://www.raywenderlich.com/11781349-understanding-data-flow-i
   <tr>
     <td class="tg-0pky">@ObservedObject</td>
     <td class="tg-0pky">reference</td>
-    <td class="tg-0pky"></td>
+    <td class="tg-0pky">class MovieStore: ObservableObject</td>
   </tr>
     <tr>
     <td class="tg-0pky">@ EnvironmentObject </td>
@@ -64,3 +66,6 @@ A [RW tutorial](https://www.raywenderlich.com/11781349-understanding-data-flow-i
 </tbody>
 </table>
 
+<pre><code><span class="hljs-attribute"></span>
+
+</code></pre>

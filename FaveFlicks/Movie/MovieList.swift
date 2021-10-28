@@ -34,7 +34,7 @@ import SwiftUI
 
 // swiftlint:disable multiple_closures_with_trailing_closure
 struct MovieList: View {
-  var movieStore = MovieStore()
+  @ObservedObject var movieStore = MovieStore() // class MovieStore: ObservableObject
   @State private var isPresented = false
 
   var body: some View {
@@ -51,13 +51,13 @@ struct MovieList: View {
       .navigationBarTitle(Text("Fave Flicks"))
       .navigationBarItems(
         leading:
-          NavigationLink(destination: UserView()) {
-            Image(systemName: "person.fill")
-          },
+        NavigationLink(destination: UserView()) {
+          Image(systemName: "person.fill")
+        },
         trailing:
-          Button(action: { isPresented.toggle() }) {
-            Image(systemName: "plus")
-          }
+        Button(action: { isPresented.toggle() }) {
+          Image(systemName: "plus")
+        }
       )
     }
   }
