@@ -37,6 +37,7 @@ struct UserView: View {
   @State private var userName = "" // local storage
   @State private var favoriteGenre = ""
   @EnvironmentObject var userStore: UserStore
+  @Environment(\.presentationMode) var presentationMode
 
   var body: some View {
     NavigationView {
@@ -68,6 +69,7 @@ struct UserView: View {
   func updateUserInfo() {
     let newUserInfo = UserInfo(userName: userName, favoriteGenre: favoriteGenre)
     userStore.currentUserInfo = newUserInfo
+    presentationMode.wrappedValue.dismiss()
   }
 }
 
