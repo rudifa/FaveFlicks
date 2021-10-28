@@ -37,6 +37,7 @@ struct AddMovie: View {
   static let defaultMovieGenre = Movie.possibleGenres.first ?? "Genre-buster"
 
   let movieStore: MovieStore
+  @EnvironmentObject var userStore: UserStore
   @Binding var showModal: Bool
   @State private var title = ""
   @State private var genre = ""
@@ -71,6 +72,7 @@ struct AddMovie: View {
         }
       )
     }
+    .onAppear { genre = userStore.currentUserInfo?.favoriteGenre ?? "" }
   }
 
   private func addMovie() {
