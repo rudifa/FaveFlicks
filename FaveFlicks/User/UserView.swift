@@ -35,6 +35,7 @@ import SwiftUI
 struct UserView: View {
   // 1
   @State private var userName = "" // local storage
+  @State private var favoriteGenre = ""
 
   var body: some View {
     NavigationView {
@@ -42,6 +43,9 @@ struct UserView: View {
         Section(header: Text("User")) {
           // 2
           TextField("User Name", text: $userName) // binding
+        }
+        Section(header: Text("Favorite Genre")) {
+          GenrePicker(genre: $favoriteGenre)
         }
       }
     }
