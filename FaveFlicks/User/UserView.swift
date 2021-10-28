@@ -36,6 +36,7 @@ struct UserView: View {
   // 1
   @State private var userName = "" // local storage
   @State private var favoriteGenre = ""
+  @EnvironmentObject var userStore: UserStore
 
   var body: some View {
     NavigationView {
@@ -57,10 +58,17 @@ struct UserView: View {
         Text("Update")
       }
     )
+    .onAppear {
+      userName = userStore.currentUserInfo?.userName ?? ""
+      favoriteGenre = userStore.currentUserInfo?.favoriteGenre ?? ""
+    }
   }
 
   // 4
-  func updateUserInfo() {}
+  func updateUserInfo() {
+    let newUserInfo = UserInfo(userName: userName, favoriteGenre: favoriteGenre)
+    userStore.currentUserInfo = newUserInfo
+  }
 }
 
 struct UserView_Previews: PreviewProvider {

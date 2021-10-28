@@ -34,6 +34,7 @@ import SwiftUI
 
 // swiftlint:disable multiple_closures_with_trailing_closure
 struct MovieList: View {
+  @EnvironmentObject var userStore: UserStore
   // @ObservedObject var movieStore = MovieStore() // class MovieStore: ObservableObject
   @StateObject var movieStore = MovieStore() // similar to above, used for local objects
 
@@ -54,7 +55,12 @@ struct MovieList: View {
       .navigationBarItems(
         leading:
         NavigationLink(destination: UserView()) {
-          Image(systemName: "person.fill")
+          HStack {
+            // 1
+            userStore.currentUserInfo.map { Text($0.userName) }
+            // 2
+            Image(systemName: "person.fill")
+          }
         },
         trailing:
         Button(action: { isPresented.toggle() }) {

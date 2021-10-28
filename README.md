@@ -28,7 +28,7 @@ A [RW tutorial](https://www.raywenderlich.com/11781349-understanding-data-flow-i
   <tr>
     <th class="tg-0pky"></th>
     <th class="tg-0pky">type</th>
-    <th class="tg-0pky">example</th>
+    <th class="tg-0pky">example | note</th>
   </tr>
 </thead>
 <tbody>
@@ -53,14 +53,24 @@ A [RW tutorial](https://www.raywenderlich.com/11781349-understanding-data-flow-i
     <td class="tg-0pky">class MovieStore: ObservableObject</td>
   </tr>
     <tr>
-    <td class="tg-0pky">@ EnvironmentObject </td>
+    <td class="tg-0pky">@EnvironmentObject </td>
     <td class="tg-0pky">reference</td>
+    <td class="tg-0pky">class UserStore: ObservableObject<br/>with at least one @Published variable<br/>supplied to an ancestor object, visible by descenants</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">@Environment </td>
+    <td class="tg-0pky"></td>
     <td class="tg-0pky"></td>
   </tr>
   <tr>
-    <td class="tg-0pky">@ Environment </td>
+    <td class="tg-0pky"> </td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">@Published </td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">triggers updates in observers of an ObservableObject</td>
   </tr>
 
 </tbody>
