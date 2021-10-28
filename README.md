@@ -44,7 +44,7 @@ A [RW tutorial](https://www.raywenderlich.com/11781349-understanding-data-flow-i
   </tr>
   <tr>
     <td class="tg-0pky">@StateObject</td>
-    <td class="tg-0pky"></td>
+    <td class="tg-0pky">reference</td>
     <td class="tg-0pky"></td>
   </tr>
   <tr>

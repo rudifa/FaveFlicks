@@ -34,7 +34,9 @@ import SwiftUI
 
 // swiftlint:disable multiple_closures_with_trailing_closure
 struct MovieList: View {
-  @ObservedObject var movieStore = MovieStore() // class MovieStore: ObservableObject
+  // @ObservedObject var movieStore = MovieStore() // class MovieStore: ObservableObject
+  @StateObject var movieStore = MovieStore() // similar to above, used for local objects
+
   @State private var isPresented = false
 
   var body: some View {
