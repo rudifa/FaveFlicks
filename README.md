@@ -38,5 +38,5 @@ See also [State and Data Flow](https://developer.apple.com/documentation/swiftui
 |                      |             |
 
 ### Which wrapper?
-![alt](./FaveFlicks/Assets.xcassets/SwiftUI-property-wrappers.imageset/SwiftUI-property-wrappers.png)
+![alt](./FaveFlicks/App/Assets.xcassets/SwiftUI-property-wrappers.imageset/SwiftUI-property-wrappers.png)
 
